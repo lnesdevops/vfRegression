@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="3" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2018-11-30" time="13:36:52">
+  <environment user="farnelaj" machine-name="LNGLEEL7035319" cwd="C:\Source\github\vfRegression" user-domain="LEGAL" platform="Microsoft Windows 10 Enterprise|C:\windows|\Device\Harddisk0\Partition3" nunit-version="2.5.8.0" os-version="10.0.15063" clr-version="4.0.30319.42000" />
+  <culture-info current-culture="en-GB" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="3.5759" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="C:\Source\github\vfRegression\deploy.unit.tests.ps1" executed="True" result="Success" success="True" time="3.5759" asserts="0" description="C:\Source\github\vfRegression\deploy.unit.tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="vfRegression Deployment Tests" executed="True" result="Success" success="True" time="3.5759" asserts="0" description="vfRegression Deployment Tests">
+            <results>
+              <test-suite type="TestFixture" name="When vfRegression template is deployed" executed="True" result="Success" success="True" time="3.5759" asserts="0" description="When vfRegression template is deployed">
+                <results>
+                  <test-case description="Has a JSON template" name="vfRegression Deployment Tests.When vfRegression template is deployed.Has a JSON template" time="3.5156" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Converts from JSON and has the expected properties" name="vfRegression Deployment Tests.When vfRegression template is deployed.Converts from JSON and has the expected properties" time="0.0303" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should be deployed successfully" name="vfRegression Deployment Tests.When vfRegression template is deployed.Should be deployed successfully" time="0.0301" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

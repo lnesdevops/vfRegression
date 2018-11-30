@@ -1,19 +1,18 @@
 {
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0",
+    "contentVersion": "1.0.0.0",
     "parameters": {
         "virtualMachineName":{"type": "string"},
         "adminUserName":  {"type": "string"},
         "adminPassword":  {"type": "securestring"},
         "domainUsername": {"type": "string"},
-        "domainPassword": {"type": "securestring"}  
-
+        "domainPassword": {"type": "securestring"}
     },
     "variables": {},
     "resources": [
         {
             "apiVersion": "2017-05-10",
-            "name": "linkedTemplate",
+            "name": "[concat('vfReg-', uniqueString(resourceGroup().id, deployment().name))]",
             "type": "Microsoft.Resources/deployments",
             "properties": {
             "mode": "Incremental",
@@ -31,5 +30,5 @@
             }
         }   
     ],
-    "outputs": {}
+    "outputs": { }
 }

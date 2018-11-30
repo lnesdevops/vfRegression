@@ -1,8 +1,35 @@
 {
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0",
-    "parameters": {},
+    "parameters": {
+        "virtualMachineName":{"type": "string"},
+        "adminUserName":  {"type": "string"},
+        "adminPassword":  {"type": "securestring"},
+        "domainUsername": {"type": "string"},
+        "domainPassword": {"type": "securestring"}  
+
+    },
     "variables": {},
-    "resources": [],
+    "resources": [
+        {
+            "apiVersion": "2017-05-10",
+            "name": "linkedTemplate",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/w16build/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "[parameters('virtualMachineName')]"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"} 
+                }
+            }
+        }   
+    ],
     "outputs": {}
 }

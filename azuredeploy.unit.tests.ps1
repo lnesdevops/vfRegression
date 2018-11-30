@@ -33,8 +33,8 @@ Describe "vfRegression Deployment Tests" {
                5>&1
     $result = (($output[32] -split "Body:")[1] | ConvertFrom-Json).properties
 
-   # $output | out-file "rawtestresult.json"
-   # write-host $result.validatedResources
+   $output | out-file "rawtestresult.json"
+   write-host $result.validatedResources
 
     It 'Has a JSON template' {        
         $templateFileLocation | Should Exist

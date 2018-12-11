@@ -7,7 +7,8 @@
         "domainUsername": {"type": "string"},
         "domainPassword": {"type": "securestring"},
         "sqlAuthenticationLogin": {"type": "string"},
-        "sqlAuthenticationPassword" : {"type": "securestring"}
+        "sqlAuthenticationPassword" : {"type": "securestring"},
+        "domainToJoin" : {"type": "string"}
     },
     "variables": {},
     "resources": [
@@ -167,7 +168,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -186,7 +188,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -205,7 +208,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -224,7 +228,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -243,7 +248,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -262,7 +268,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -281,7 +288,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -300,7 +308,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -319,7 +328,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -338,7 +348,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -357,7 +368,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -376,7 +388,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -395,7 +408,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -414,7 +428,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -433,7 +448,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -452,7 +468,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -471,7 +488,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         },
@@ -490,7 +508,8 @@
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "domainToJoin": {"value": "[parameters('domainToJoin')]"}
                 }
             }
         }

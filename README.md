@@ -12,3 +12,9 @@ Change this to
  .\invokePester.ps1 -SourceDir .\ -local $false
 ~~~~
 ...when running in AzureDevOps
+
+(Running a deployment locally on your machine)
+~~~~
+new-azurermresourcegroupdeployment -ResourceGroupName vfregression_rg -DeploymentName
+vfregressionDeploy -TemplateFile .\azuredeploy.json -TemplateParameterFile .\parameters.json
+~~~~

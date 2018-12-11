@@ -151,6 +151,348 @@
                 "domainPassword": {"value": "[parameters('domainPassword')]"}
                 }
             }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt01",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201632bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt01"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt02",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201632bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt02"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt03",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201632bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt03"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt04",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201632bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt04"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt05",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201632bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt05"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt06",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201632bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt06"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt07",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201664bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt07"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt08",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201664bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt08"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt09",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201664bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt09"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt10",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201664bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt10"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt11",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201664bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt11"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt12",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201664bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt12"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt13",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201332bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt13"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt14",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201332bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt14"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt15",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201332bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt15"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt16",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201364bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt16"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt17",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201364bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt17"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregclnt18",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/win10office201364bit/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregclnt18"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
         }
     ],
     "outputs": {}

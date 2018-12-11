@@ -2,17 +2,102 @@
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "virtualMachineName":{"type": "string"},
         "adminUserName":  {"type": "string"},
         "adminPassword":  {"type": "securestring"},
         "domainUsername": {"type": "string"},
-        "domainPassword": {"type": "securestring"}
+        "domainPassword": {"type": "securestring"},
+        "sqlAuthenticationLogin": {"type": "string"},
+        "sqlAuthenticationPassword" : {"type": "securestring"}
     },
     "variables": {},
     "resources": [
         {
             "apiVersion": "2017-05-10",
-            "name": "[concat('vfReg-', uniqueString(resourceGroup().id, deployment().name))]",
+            "name": "vfRegression-lnvfregsql01",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/sql16w16build/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregsql01"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "sqlAuthenticationLogin": {"value": "[parameters('sqlAuthenticationLogin')]"},
+                "sqlAuthenticationPassword" : {"value": "[parameters('sqlAuthenticationPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregsql02",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/sql16w16build/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregsql02"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "sqlAuthenticationLogin": {"value": "[parameters('sqlAuthenticationLogin')]"},
+                "sqlAuthenticationPassword" : {"value": "[parameters('sqlAuthenticationPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregsql03",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/sql16w16build/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregsql03"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "sqlAuthenticationLogin": {"value": "[parameters('sqlAuthenticationLogin')]"},
+                "sqlAuthenticationPassword" : {"value": "[parameters('sqlAuthenticationPassword')]"} 
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregsql04",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/sql16w16build/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregsql04"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"},
+                "sqlAuthenticationLogin": {"value": "[parameters('sqlAuthenticationLogin')]"},
+                "sqlAuthenticationPassword" : {"value": "[parameters('sqlAuthenticationPassword')]"} 
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregsrv01",
             "type": "Microsoft.Resources/deployments",
             "properties": {
             "mode": "Incremental",
@@ -21,14 +106,52 @@
                 "contentVersion": "1.0.0.0"
                 },
             "parameters":{
-                "virtualMachineName":{"value": "[parameters('virtualMachineName')]"},
+                "virtualMachineName":{"value": "lnvfregsrv01"},
                 "adminUserName":  {"value": "[parameters('adminUserName')]"},
                 "adminPassword":  {"value": "[parameters('adminPassword')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
-                "domainPassword": {"value": "[parameters('domainPassword')]"} 
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
                 }
             }
-        }   
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregsrv02",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/w16build/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregsrv02"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregsrv03",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/w16build/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregsrv03"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        }
     ],
-    "outputs": { }
+    "outputs": {}
 }

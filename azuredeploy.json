@@ -155,6 +155,25 @@
         },
         {
             "apiVersion": "2017-05-10",
+            "name": "vfRegression-lnvfregsrv04",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+            "mode": "Incremental",
+            "templateLink": {
+                "uri": "https://raw.githubusercontent.com/lnesdevops/w16build/master/azuredeploy.json",
+                "contentVersion": "1.0.0.0"
+                },
+            "parameters":{
+                "virtualMachineName":{"value": "lnvfregsrv04"},
+                "adminUserName":  {"value": "[parameters('adminUserName')]"},
+                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "domainUsername": {"value": "[parameters('domainUsername')]"},
+                "domainPassword": {"value": "[parameters('domainPassword')]"}
+                }
+            }
+        },        
+        {
+            "apiVersion": "2017-05-10",
             "name": "vfRegression-lnvfregclnt01",
             "type": "Microsoft.Resources/deployments",
             "properties": {

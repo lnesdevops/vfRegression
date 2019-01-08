@@ -2,8 +2,10 @@
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "adminUserName":  {"type": "string"},
-        "adminPassword":  {"type": "securestring"},
+        "adminUserNameClient":  {"type": "string"},
+        "adminPasswordClient":  {"type": "securestring"},
+        "adminUserNameServer":  {"type": "string"},
+        "adminPasswordServer":  {"type": "securestring"},
         "domainUsername": {"type": "string"},
         "domainPassword": {"type": "securestring"},
         "sqlAuthenticationLogin": {"type": "string"},
@@ -24,8 +26,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregsql01"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameServer')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordServer')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "sqlAuthenticationLogin": {"value": "[parameters('sqlAuthenticationLogin')]"},
@@ -45,8 +47,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregsql02"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameServer')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordServer')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "sqlAuthenticationLogin": {"value": "[parameters('sqlAuthenticationLogin')]"},
@@ -66,8 +68,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregsql03"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameServer')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordServer')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "sqlAuthenticationLogin": {"value": "[parameters('sqlAuthenticationLogin')]"},
@@ -87,8 +89,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregsql04"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameServer')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordServer')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "sqlAuthenticationLogin": {"value": "[parameters('sqlAuthenticationLogin')]"},
@@ -108,8 +110,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregsrv01"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameServer')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordServer')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"}
                 }
@@ -127,8 +129,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregsrv02"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameServer')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordServer')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"}
                 }
@@ -146,8 +148,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregsrv03"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameServer')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordServer')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"}
                 }
@@ -165,8 +167,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregsrv04"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameServer')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordServer')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"}
                 }
@@ -184,8 +186,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt01"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -204,8 +206,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt02"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -224,8 +226,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt03"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -244,8 +246,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt04"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -264,8 +266,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt05"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -284,8 +286,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt06"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -304,8 +306,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt07"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -324,8 +326,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt08"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -344,8 +346,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt09"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -364,8 +366,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt10"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -384,8 +386,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt11"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -404,8 +406,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt12"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -424,8 +426,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt13"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -444,8 +446,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt14"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -464,8 +466,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt15"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -484,8 +486,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt16"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -504,8 +506,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt17"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -524,8 +526,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt18"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -544,8 +546,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt19"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -564,8 +566,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt20"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -584,8 +586,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt21"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -604,8 +606,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt22"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -624,8 +626,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt23"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -644,8 +646,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt24"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -664,8 +666,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt25"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -684,8 +686,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt26"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -704,8 +706,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt27"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -724,8 +726,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt28"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -744,8 +746,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt29"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -764,8 +766,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt30"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -784,8 +786,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt31"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -804,8 +806,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt32"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -824,8 +826,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt33"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -844,8 +846,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt34"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -864,8 +866,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt35"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
@@ -884,8 +886,8 @@
                 },
             "parameters":{
                 "virtualMachineName":{"value": "lnvfregclnt36"},
-                "adminUserName":  {"value": "[parameters('adminUserName')]"},
-                "adminPassword":  {"value": "[parameters('adminPassword')]"},
+                "adminUserName":  {"value": "[parameters('adminUserNameClient')]"},
+                "adminPassword":  {"value": "[parameters('adminPasswordClient')]"},
                 "domainUsername": {"value": "[parameters('domainUsername')]"},
                 "domainPassword": {"value": "[parameters('domainPassword')]"},
                 "domainToJoin": {"value": "[parameters('domainToJoin')]"}
